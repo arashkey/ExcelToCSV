@@ -70,7 +70,7 @@ namespace ExcelToCSV
                         string value = dr[i].ToString();
                         if (value.Contains(','))
                         {
-                            value = String.Format("\"{0}\"", value);
+                            value = string.Format("\"{0}\"", value.Replace(',', ' '));
                             sw.Write(value);
                         }
                         else
